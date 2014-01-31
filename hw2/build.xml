@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<project basedir="." default="compile" name="ASG2">
+    <property name="src.dir" value="cs455/cdn" />
+    <property name="build.dir" value="build" />
+    
+    <target name="clean">
+        <delete dir="${build.dir}" />
+    </target>
+    <target name="compile">
+    	<mkdir dir="${build.dir}" />
+        <javac srcdir="${src.dir}" destdir="${build.dir}" debug="on" includeantruntime="false" fork="true" />
+     </target>
+</project>
